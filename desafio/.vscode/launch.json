@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Django: Runserver",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/mysite/manage.py",
+            "args": [
+                "runserver",
+                "0.0.0.0:8000"
+            ],
+            "django": true,
+            "justMyCode": true,
+            "preLaunchTask": "Ativar venv"
+        },
+        {
+            "name": "Django: Docker",
+            "type": "django", // tem um erro aqui, ainda não descobri como estruturar o docker nessa parte
+            "request": "launch",
+            "command": "docker start django",
+            "preLaunchTask": "Ativar venv"
+        }
+    ]
+}
